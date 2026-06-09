@@ -105,13 +105,17 @@
             <circle cx="200" cy="200" r="180" fill="url(#goldGlow)" />
 
             <!-- Orbiting Data Rings -->
-            <circle cx="200" cy="200" r="155" fill="none" stroke="rgba(197, 168, 128, 0.12)" stroke-width="1.5" stroke-dasharray="10 40" class="orbiting-ring ring-slow" />
-            <circle cx="200" cy="200" r="125" fill="none" stroke="rgba(197, 168, 128, 0.2)" stroke-width="1" stroke-dasharray="80 15 30 15" class="orbiting-ring ring-reverse" />
-            <circle cx="200" cy="200" r="95" fill="none" stroke="rgba(226, 203, 176, 0.3)" stroke-width="2" stroke-dasharray="50 50" class="orbiting-ring ring-fast" />
+            <circle cx="200" cy="200" r="155" fill="none" stroke="rgba(197, 168, 128, 0.12)" stroke-width="1.5"
+              stroke-dasharray="10 40" class="orbiting-ring ring-slow" />
+            <circle cx="200" cy="200" r="125" fill="none" stroke="rgba(197, 168, 128, 0.2)" stroke-width="1"
+              stroke-dasharray="80 15 30 15" class="orbiting-ring ring-reverse" />
+            <circle cx="200" cy="200" r="95" fill="none" stroke="rgba(226, 203, 176, 0.3)" stroke-width="2"
+              stroke-dasharray="50 50" class="orbiting-ring ring-fast" />
 
             <!-- Static motherboard background lines -->
             <path d="M 200 200 L 140 140 L 60 140" fill="none" stroke="rgba(197, 168, 128, 0.15)" stroke-width="1.5" />
-            <path d="M 200 200 L 130 270 L 130 330 L 70 330" fill="none" stroke="rgba(197, 168, 128, 0.15)" stroke-width="1.5" />
+            <path d="M 200 200 L 130 270 L 130 330 L 70 330" fill="none" stroke="rgba(197, 168, 128, 0.15)"
+              stroke-width="1.5" />
             <path d="M 200 200 L 270 130 L 270 60" fill="none" stroke="rgba(197, 168, 128, 0.15)" stroke-width="1.5" />
             <path d="M 200 200 L 260 260 L 340 260" fill="none" stroke="rgba(197, 168, 128, 0.15)" stroke-width="1.5" />
             <path d="M 200 200 L 200 80 L 170 50" fill="none" stroke="rgba(197, 168, 128, 0.1)" stroke-width="1" />
@@ -119,10 +123,14 @@
             <path d="M 200 200 L 320 200 L 350 170" fill="none" stroke="rgba(197, 168, 128, 0.1)" stroke-width="1" />
 
             <!-- Animated data paths flowing outwards -->
-            <path d="M 200 200 L 140 140 L 60 140" fill="none" stroke="url(#circuitGold)" stroke-width="2" class="data-trace" />
-            <path d="M 200 200 L 130 270 L 130 330 L 70 330" fill="none" stroke="url(#circuitGold)" stroke-width="2" class="data-trace delay-1" />
-            <path d="M 200 200 L 270 130 L 270 60" fill="none" stroke="url(#circuitGold)" stroke-width="2" class="data-trace delay-2" />
-            <path d="M 200 200 L 260 260 L 340 260" fill="none" stroke="url(#circuitGold)" stroke-width="2" class="data-trace delay-3" />
+            <path d="M 200 200 L 140 140 L 60 140" fill="none" stroke="url(#circuitGold)" stroke-width="2"
+              class="data-trace" />
+            <path d="M 200 200 L 130 270 L 130 330 L 70 330" fill="none" stroke="url(#circuitGold)" stroke-width="2"
+              class="data-trace delay-1" />
+            <path d="M 200 200 L 270 130 L 270 60" fill="none" stroke="url(#circuitGold)" stroke-width="2"
+              class="data-trace delay-2" />
+            <path d="M 200 200 L 260 260 L 340 260" fill="none" stroke="url(#circuitGold)" stroke-width="2"
+              class="data-trace delay-3" />
 
             <!-- Outer terminals / connection nodes -->
             <circle cx="60" cy="140" r="3" fill="#C5A880" />
@@ -135,22 +143,25 @@
 
             <!-- Center CPU Silicon core -->
             <g class="silicon-core">
-              <circle cx="200" cy="200" r="62" fill="#111113" stroke="url(#circuitGold)" stroke-width="2" filter="url(#glow)" />
+              <circle cx="200" cy="200" r="62" fill="#111113" stroke="url(#circuitGold)" stroke-width="2"
+                filter="url(#glow)" />
               <!-- Silicon Chip Core (golden frame) -->
-              <polygon points="175,150 225,150 250,175 250,225 225,250 175,250 150,225 150,175" fill="#161619" stroke="url(#circuitGold)" stroke-width="1.5" />
-              
+              <polygon points="175,150 225,150 250,175 250,225 225,250 175,250 150,225 150,175" fill="#161619"
+                stroke="url(#circuitGold)" stroke-width="1.5" />
+
               <!-- Microchip die area -->
-              <rect x="180" y="180" width="40" height="40" rx="4" fill="none" stroke="rgba(197, 168, 128, 0.4)" stroke-width="1" />
-              
+              <rect x="180" y="180" width="40" height="40" rx="4" fill="none" stroke="rgba(197, 168, 128, 0.4)"
+                stroke-width="1" />
+
               <!-- Central pulsing core indicator LED -->
               <circle cx="200" cy="200" r="8" fill="#C5A880" filter="url(#glow-heavy)" class="heartbeat-led" />
-              
+
               <!-- CPU details & pins -->
               <path d="M 170 180 H 160 M 170 200 H 160 M 170 220 H 160
                        M 230 180 H 240 M 230 200 H 240 M 230 220 H 240
                        M 180 170 V 160 M 200 170 V 160 M 220 170 V 160
-                       M 180 230 V 240 M 200 230 V 240 M 220 230 V 240" 
-                    stroke="url(#circuitGold)" stroke-width="1.5" stroke-linecap="round" />
+                       M 180 230 V 240 M 200 230 V 240 M 220 230 V 240" stroke="url(#circuitGold)" stroke-width="1.5"
+                stroke-linecap="round" />
             </g>
           </svg>
         </div>
@@ -854,7 +865,7 @@
   <footer class="footer">
     <div class="container footer-container">
       <div class="footer-text">
-        &copy; 2026. Built with pride by <span>G. Sriteja Gujjari</span>
+        &copy; 2026. Built with pride by <span>Sriteja Gujjari</span>
       </div>
       <div class="footer-links">
         <a href="#hero" class="footer-link">Home</a>

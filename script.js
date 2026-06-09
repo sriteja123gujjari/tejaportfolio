@@ -328,6 +328,35 @@ document.addEventListener('DOMContentLoaded', () => {
         
         heatmapContainer.appendChild(cell);
       }
+      }
     }
+  }
+
+  // --- Hero Interactive Parallax Circuit Core ---
+  const heroDesign = document.getElementById('hero-interactive-design');
+  const circuitContainer = document.getElementById('circuit-container');
+  
+  if (heroDesign && circuitContainer) {
+    heroDesign.addEventListener('mousemove', (e) => {
+      const rect = heroDesign.getBoundingClientRect();
+      const x = e.clientX - rect.left - rect.width / 2;
+      const y = e.clientY - rect.top - rect.height / 2;
+      
+      // Calculate rotation angles based on mouse offset (limit to max 15 degrees)
+      const rotateX = -(y / rect.height) * 30;
+      const rotateY = (x / rect.width) * 30;
+      
+      circuitContainer.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+    });
+    
+    heroDesign.addEventListener('mouseleave', () => {
+      // Smoothly reset position
+      circuitContainer.style.transform = 'rotateX(0deg) rotateY(0deg)';
+      circuitContainer.style.transition = 'transform 0.5s ease';
+    });
+    
+    heroDesign.addEventListener('mouseenter', () => {
+      circuitContainer.style.transition = 'transform 0.1s ease-out';
+    });
   }
 });

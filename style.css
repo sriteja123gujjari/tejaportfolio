@@ -486,32 +486,105 @@ body {
   transform: translateY(-2px);
 }
 
-/* Hero Profile Frame */
-.hero-image-wrapper {
+/* Hero Interactive Design Wrapper */
+.hero-design-wrapper {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  perspective: 1000px;
+  width: 100%;
+  max-width: 380px;
+  aspect-ratio: 1;
 }
 
-.hero-image-container {
-  width: 320px;
-  height: 320px;
-  border-radius: 50%;
-  position: relative;
-  z-index: 1;
-  padding: 8px;
-  border: 1px solid var(--primary);
-  background: transparent;
-}
-
-.hero-profile-img {
+.circuit-container {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  border-radius: 50%;
-  background-color: var(--bg-dark);
-  filter: grayscale(10%) contrast(105%);
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.1s ease-out;
+}
+
+.circuit-svg {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 0 24px rgba(197, 168, 128, 0.18));
+}
+
+/* Animations */
+.orbiting-ring {
+  transform-origin: 200px 200px;
+}
+.ring-slow {
+  animation: rotate-cw 40s linear infinite;
+}
+.ring-reverse {
+  animation: rotate-ccw 30s linear infinite;
+}
+.ring-fast {
+  animation: rotate-cw 20s linear infinite;
+}
+
+.silicon-core {
+  transform-origin: 200px 200px;
+  animation: rotate-cw 60s linear infinite;
+  transition: transform 0.3s ease;
+}
+
+.hero-design-wrapper:hover .silicon-core {
+  animation-duration: 15s;
+}
+
+.heartbeat-led {
+  animation: led-pulse 2.2s ease-in-out infinite;
+}
+
+/* Data flow pulse animation along traces */
+.data-trace {
+  stroke-dasharray: 40 160;
+  stroke-dashoffset: 200;
+  animation: data-flow 3s linear infinite;
+}
+
+.data-trace.delay-1 {
+  animation-delay: -0.7s;
+  animation-duration: 2.4s;
+}
+.data-trace.delay-2 {
+  animation-delay: -1.4s;
+  animation-duration: 3.5s;
+}
+.data-trace.delay-3 {
+  animation-delay: -2.1s;
+  animation-duration: 2.8s;
+}
+
+@keyframes rotate-cw {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes rotate-ccw {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(-360deg); }
+}
+
+@keyframes led-pulse {
+  0%, 100% {
+    fill-opacity: 0.35;
+    filter: drop-shadow(0 0 3px rgba(197, 168, 128, 0.45));
+  }
+  50% {
+    fill-opacity: 1;
+    filter: drop-shadow(0 0 15px rgba(197, 168, 128, 0.95));
+  }
+}
+
+@keyframes data-flow {
+  to {
+    stroke-dashoffset: 0;
+  }
 }
 
 /* --- Section Container --- */

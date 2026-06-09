@@ -328,7 +328,6 @@ document.addEventListener('DOMContentLoaded', () => {
         
         heatmapContainer.appendChild(cell);
       }
-      }
     }
   }
 
